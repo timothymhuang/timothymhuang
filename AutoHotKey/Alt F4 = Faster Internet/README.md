@@ -1,0 +1,2 @@
+### Alt + F4 = Faster Internet
+Use this script to demonstrate to your friends that a new feature has been added to windows (or any application you want to say) and that Alt + F4 will make your internet faster.
