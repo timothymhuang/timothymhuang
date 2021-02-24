@@ -51,4 +51,5 @@ This will reset the score of all players including players that are currently no
 Exit the program.
 ## Other Notes
 The scores and amount of players is stored in the list ⌊SCORE
+
 The player names are stored in strings Str1, Str 2, ..., Str9.
