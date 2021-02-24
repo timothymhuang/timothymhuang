@@ -1,7 +1,7 @@
-# About ME
+# About Me
 My name is Timothy. I am a human.
 
-# What this repostiory is.
+# What this repostiory is
 Welcome to my GitHub repository
 
 This is where I put any random stuff I'm doing that I want to share.
