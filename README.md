@@ -1,7 +1,6 @@
-### About Timothy
-Welcome to my GitHub Page
-This is my main personal github page
-I plan to work on more on this later, as I have stuff I want to add like my ahk scripts.
+### Hello
+Welcome to my GitHub repository
+This is where I put any random stuff I'm doing that I want to share.
 
 <!--
 **timothymhuang/timothymhuang** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
