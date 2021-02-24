@@ -1,0 +1,405 @@
+"Scoreboard Program
+"Version 1
+"Made by Timothy Huang
+"github.com/timothymhuang
+
+SetUpEditor ⌊SCORE
+If dim(⌊SCORE)≠10
+Then
+{0,0,0,0,0,0,0,0,0,2}→⌊SCORE
+"Player 1"→Str1
+"Player 2"→Str2
+"Player 3"→Str3
+"Player 4"→Str4
+"Player 5"→Str5
+"Player 6"→Str6
+"Player 7"→Str7
+"Player 8"→Str8
+"Player 9"→Str9
+End
+
+Lbl PL
+⌊SCORE(10)→P
+ClrHome
+0→A
+While A<P
+A+1→A
+Disp ⌊SCORE(A)
+End
+0→A
+"PLAYER NAMES
+If P≥1
+Then
+Output(1,2,"1.")
+Output(1,4,Str1)
+End
+If P≥2
+Then
+Output(2,2,"2.")
+Output(2,4,Str2)
+End
+If P≥3
+Then
+Output(3,2,"3.")
+Output(3,4,Str3)
+End
+If P≥4
+Then
+Output(4,2,"4.")
+Output(4,4,Str4)
+End
+If P≥5
+Then
+Output(5,2,"5.")
+Output(5,4,Str5)
+End
+If P≥6
+Then
+Output(6,2,"6.")
+Output(6,4,Str6)
+End
+If P≥7
+Then
+Output(7,2,"7.")
+Output(7,4,Str7)
+End
+If P≥8
+Then
+Output(8,2,"8.")
+Output(8,4,Str8)
+End
+If P≥9
+Then
+Output(9,2,"9.")
+Output(9,4,Str9)
+End
+Output(10,1,"^^^^ EPIC  SCOREBOARD ^^^^")
+
+Repeat B
+getKey→B
+End
+Output(10,1,"                          ")
+0→A
+If B=92
+Then
+If P<1
+Goto ST
+Output(1,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(1)+A→⌊SCORE(1)
+Goto PL
+Else
+If B=93
+Then
+If P<2
+Goto ST
+Output(2,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(2)+A→⌊SCORE(2)
+Goto PL
+Else
+If B=94
+Then
+If P<3
+Goto ST
+Output(3,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(3)+A→⌊SCORE(3)
+Goto PL
+Else
+If B=82
+Then
+If P<4
+Goto ST
+Output(4,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(4)+A→⌊SCORE(4)
+Goto PL
+Else
+If B=83
+Then
+If P<5
+Goto ST
+Output(5,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(5)+A→⌊SCORE(5)
+Goto PL
+Else
+If B=84
+Then
+If P<6
+Goto ST
+Output(6,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(6)+A→⌊SCORE(6)
+Goto PL
+Else
+If B=72
+Then
+If P<7
+Goto ST
+Output(7,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(7)+A→⌊SCORE(7)
+Goto PL
+Else
+If B=73
+Then
+If P<8
+Goto ST
+Output(8,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(8)+A→⌊SCORE(8)
+Goto PL
+Else
+If B=74
+Then
+If P<9
+Goto ST
+Output(9,1,"*")
+Input "ADD TO SCORE: ",A
+⌊SCORE(9)+A→⌊SCORE(9)
+Goto PL
+Else
+Goto ST
+End
+
+
+Lbl ST
+Menu("SETTINGS","RESUME",2X,"PLAYER AMOUNT",2J,"PLAYER NAMES",2K,"RESET SCORES",2L,"EXIT",2Y)
+
+Lbl 2J
+ClrHome
+P→Q
+Input "AMOUNT OF PLAYERS: ",P
+If fPart(P
+Then
+Disp "Must be an Integer
+Q→P
+Pause 
+Goto 2J
+End
+If P<0 or P>9
+Then
+Disp "Must be between 0-9
+Q→P
+Pause 
+Goto 2J
+End
+P→⌊SCORE(10)
+If P<Q
+Menu("CLEAR REMOVED PLAYERS?","NO",ST,"YES",2N)
+Lbl 2N
+If P<1
+Then
+""→Str1
+0→⌊SCORE(1)
+End
+If P<2
+Then
+""→Str2
+0→⌊SCORE(2)
+End
+If P<3
+Then
+""→Str3
+0→⌊SCORE(3)
+End
+If P<4
+Then
+""→Str4
+0→⌊SCORE(4)
+End
+If P<5
+Then
+""→Str5
+0→⌊SCORE(5)
+End
+If P<6
+Then
+""→Str6
+0→⌊SCORE(6)
+End
+If P<7
+Then
+""→Str7
+0→⌊SCORE(7)
+End
+If P<8
+Then
+""→Str8
+0→⌊SCORE(8)
+End
+If P<9
+Then
+""→Str9
+0→⌊SCORE(9)
+End
+
+If P≥1 and length(Str1)=0
+"PLAYER 1"→Str1
+If P≥2 and length(Str2)=0
+"PLAYER 2"→Str2
+If P≥3 and length(Str3)=0
+"PLAYER 3"→Str3
+If P≥4 and length(Str4)=0
+"PLAYER 4"→Str4
+If P≥5 and length(Str5)=0
+"PLAYER 5"→Str5
+If P≥6 and length(Str6)=0
+"PLAYER 6"→Str6
+If P≥7 and length(Str7)=0
+"PLAYER 7"→Str7
+If P≥8 and length(Str8)=0
+"PLAYER 8"→Str8
+If P≥9 and length(Str9)=0
+"PLAYER 9"→Str9
+
+Goto ST
+
+Lbl 2K
+ClrHome
+0→A
+While A<P
+A+1→A
+Disp "
+End
+If P≥1
+Then
+Output(1,2,"1.")
+Output(1,4,Str1)
+End
+If P≥2
+Then
+Output(2,2,"2.")
+Output(2,4,Str2)
+End
+If P≥3
+Then
+Output(3,2,"3.")
+Output(3,4,Str3)
+End
+If P≥4
+Then
+Output(4,2,"4.")
+Output(4,4,Str4)
+End
+If P≥5
+Then
+Output(5,2,"5.")
+Output(5,4,Str5)
+End
+If P≥6
+Then
+Output(6,2,"6.")
+Output(6,4,Str6)
+End
+If P≥7
+Then
+Output(7,2,"7.")
+Output(7,4,Str7)
+End
+If P≥8
+Then
+Output(8,2,"8.")
+Output(8,4,Str8)
+End
+If P≥9
+Then
+Output(9,2,"9.")
+Output(9,4,Str9)
+End
+Output(10,1,"^^^^^^ CHANGE NAMES ^^^^^^")
+Repeat B
+getKey→B
+End
+Output(10,1,"                          ")
+0→A
+If B=92
+Then
+If P<1
+Goto ST
+Output(1,1,"*")
+Input "SET NAME: ",Str1
+Goto 2K
+Else
+If B=93
+Then
+If P<2
+Goto ST
+Output(2,1,"*")
+Input "SET NAME: ",Str2
+Goto 2K
+Else
+If B=94
+Then
+If P<3
+Goto ST
+Output(3,1,"*")
+Input "SET NAME: ",Str3
+Goto 2K
+Else
+If B=82
+Then
+If P<4
+Goto ST
+Output(4,1,"*")
+Input "SET NAME: ",Str4
+Goto 2K
+Else
+If B=83
+Then
+If P<5
+Goto ST
+Output(5,1,"*")
+Input "SET NAME: ",Str5
+Goto 2K
+Else
+If B=84
+Then
+If P<6
+Goto ST
+Output(6,1,"*")
+Input "SET NAME: ",Str6
+Goto 2K
+Else
+If B=72
+Then
+If P<7
+Goto ST
+Output(7,1,"*")
+Input "SET NAME: ",Str7
+Goto 2K
+Else
+If B=73
+Then
+If P<8
+Goto ST
+Output(8,1,"*")
+Input "SET NAME: ",Str8
+Goto 2K
+Else
+If B=74
+Then
+If P<9
+Goto ST
+Output(9,1,"*")
+Input "SET NAME: ",Str9
+Goto 2K
+Else
+Goto ST
+End
+
+Lbl 2L
+Menu("CLEAR ALL 9 SCORES?","NO",ST,"YES",2O)
+Lbl 2O
+⌊SCORE(10)→A
+{0,0,0,0,0,0,0,0,0,A}→⌊SCORE
+Goto ST
+
+Lbl 2X
+Goto PL
+
+Lbl 2Y
+ClrHome
+Stop
