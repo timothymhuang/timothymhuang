@@ -1,0 +1,78 @@
+"COLUMN LIMIT
+24→L
+
+randInt(1,4,1)→⌊D
+randInt(1,10,1)→⌊R
+randInt(1,L,1)→⌊C
+⌊R(1)→R
+⌊C(1)→C
+⌊D(1)→D
+ClrHome
+
+Lbl A
+If R=1 and C=1
+Then
+4→D
+Goto M
+End
+If R=1 and C=L
+Then
+2→D
+Goto M
+End
+If R=10 and C=1
+Then
+3→D
+Goto M
+End
+If R=10 and C=L
+Then
+1→D
+Goto M
+End
+
+
+If R=1 and D=1
+2→D
+If R=1 and D=3
+4→D
+If R=10 and D=2
+1→D
+If R=10 and D=4
+3→D
+If C=1 and D=1
+3→D
+If C=1 and D=2
+4→D
+If C=L and D=3
+1→D
+If C=L and D=4
+2→D
+
+Lbl M
+R→W
+C→F
+If D=1
+Then
+R-1→R
+C-1→C
+End
+If D=2
+Then
+R+1→R
+C-1→C
+End
+If D=3
+Then
+R-1→R
+C+1→C
+End
+If D=4
+Then
+R+1→R
+C+1→C
+End
+
+Output(W,F,"   ")
+Output(R,C,"DVD")
+Goto A
